@@ -1,6 +1,9 @@
-creates a csv file from console query via url which has json data.
 
-takes a strig command from java command line like; java -jar GoEuroTest.jar "CITY_NAME"
+Creates a csv file from java command line with a string query via url which has json data.
+
+Takes a string command from java command line, like  "java -jar GoEuroTest.jar "CITY_NAME""
 
 java -jar GoEuroTest.jar "Hamburg"
 Url : http://api.goeuro.com/api/v2/position/suggest/en/Hamburg
+
+The "output" csv excel file will be formed in this path : "D:\\output.csv"
