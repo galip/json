@@ -1,0 +1,6 @@
+creates a csv file from console query via url which has json data.
+
+takes a strig command from java command line like; java -jar GoEuroTest.jar "CITY_NAME"
+
+java -jar GoEuroTest.jar "Hamburg"
+Url : http://api.goeuro.com/api/v2/position/suggest/en/Hamburg
