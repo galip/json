@@ -11,6 +11,7 @@ import com.google.gson.reflect.TypeToken;
 
 import jsonapp.Impl.ExcelServiceImpl;
 import jsonapp.Impl.JsonReadServiceImpl;
+import jsonapp.exception.JsonExceptionUtilImpl;
 import jsonapp.model.Csv;
 
 /**
@@ -19,7 +20,6 @@ import jsonapp.model.Csv;
  * @author gpala
  * 
  */
-
 public class JsonConvertorToCsvApp {
 
 	public static void main(String args[]) throws UnsupportedEncodingException,IOException {
@@ -33,10 +33,18 @@ public class JsonConvertorToCsvApp {
 
 		JsonReadServiceImpl jsonReadServiceImpl = new JsonReadServiceImpl();
 		ExcelServiceImpl excelServiceImpl = new ExcelServiceImpl();
+		JsonExceptionUtilImpl jsonExceptionImpl = new JsonExceptionUtilImpl();
 
 		String json = jsonReadServiceImpl.getJsonContentFromURL(Url);
 		System.out.println("Json : " + json);
+		
+		boolean validJson = jsonExceptionImpl.mayBeJSON(json);
 
+		if(!validJson) {
+			System.out.println("Your json is not valid, please try with a valid one.");
+			return;
+		}
+		
 		Gson gson = new GsonBuilder().create();
 
 		Type type = new TypeToken<List<Csv>>() {}.getType();
