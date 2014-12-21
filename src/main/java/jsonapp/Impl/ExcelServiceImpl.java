@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.List;
 import jsonapp.model.Csv;
 import jsonapp.services.ExcelService;
+import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -19,6 +20,8 @@ import org.apache.poi.ss.usermodel.Workbook;
  */
 public class ExcelServiceImpl implements ExcelService {
 
+    final static Logger logger = Logger.getLogger(ExcelServiceImpl.class);
+	
 	public void writeCsvToExcelFromJsonContent(List<Csv> csvList) {
 
 		Workbook workbook = new HSSFWorkbook();
@@ -34,6 +37,8 @@ public class ExcelServiceImpl implements ExcelService {
 		firstRowHeader.createCell(2).setCellValue("type");
 		firstRowHeader.createCell(3).setCellValue("langtitude");
 		firstRowHeader.createCell(4).setCellValue("longtitude");
+		
+		logger.info("Excel headers are created");
 
 		for (int i = 0; i < csvList.size(); i++) {
 			Row genericRow = sheet.createRow((short) i + 1);
@@ -53,20 +58,23 @@ public class ExcelServiceImpl implements ExcelService {
 		FileOutputStream fileOut = null;
 		try {
 			fileOut = new FileOutputStream(filePath);
+			logger.info("New excel file in this path : " + filePath);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			logger.error("We caught an exception, here is the reason : " + e);
 			e.printStackTrace();
 		}
 		try {
 			workbook.write(fileOut);
+			logger.info("Excel is ready.");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			logger.error("We caught an exception, here is the reason : " + e);
 			e.printStackTrace();
 		}
 		try {
 			fileOut.close();
+			logger.info("File is closed.");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			logger.error("We caught an exception, here is the reason : " + e);
 			e.printStackTrace();
 		}
 	}

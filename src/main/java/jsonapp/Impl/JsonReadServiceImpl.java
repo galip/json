@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
+import org.apache.log4j.Logger;
 
 /**
  * 19 Dec 2014
@@ -14,8 +15,10 @@ import java.nio.charset.Charset;
  */
 public class JsonReadServiceImpl {
 
+	private static Logger logger = Logger.getLogger(JsonReadServiceImpl.class);
+	
 	public String getJsonContentFromURL(String UrlParam) {
-
+		
 		StringBuilder stringBuilder = new StringBuilder();
 
 		URLConnection urlConnection = null;
@@ -50,7 +53,8 @@ public class JsonReadServiceImpl {
 			inputStreamReader.close();
 
 		} catch (Exception e) {
-			throw new RuntimeException("Exception while calling Url:"
+			logger.error("We caught an exception, here is the reason : " + e);
+			throw new RuntimeException("Exception while Url is calling : "
 					+ UrlParam, e);
 		}
 
