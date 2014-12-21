@@ -1,0 +1,45 @@
+2014-12-21 19:53:13 ERROR JsonConvertorToCsvApp:58 - we caught exception, here is the reason : com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 2
+2014-12-21 19:53:37 INFO  JsonReadServiceImpl:34 - time out
+2014-12-21 19:53:37 ERROR JsonReadServiceImpl:57 - We caught an exception, here is the reason : java.net.UnknownHostException: api.goeuro.com
+2014-12-21 19:54:36 INFO  JsonReadServiceImpl:34 - time out
+2014-12-21 19:54:57 ERROR JsonReadServiceImpl:57 - We caught an exception, here is the reason : java.net.UnknownHostException: api.goeuro.com
+2014-12-21 19:59:08 INFO  JsonReadServiceImpl:36 - time out
+2014-12-21 19:59:09 INFO  ExcelServiceImpl:43 - Excel headers are created
+2014-12-21 19:59:42 ERROR JsonReadServiceImpl:62 - We caught an exception, here is the reason : java.net.UnknownHostException: api.goeuro.com
+2014-12-21 20:02:17 ERROR JsonReadServiceImpl:61 - We caught an exception, here is the reason : java.net.UnknownHostException: api.goeuro.com
+2014-12-21 20:07:16 INFO  ExcelServiceImpl:41 - Excel headers are created
+2014-12-21 20:07:16 INFO  ExcelServiceImpl:61 - New file in this path : D:\output.csv
+2014-12-21 20:07:16 INFO  ExcelServiceImpl:68 - Excel is ready.
+2014-12-21 20:07:16 INFO  ExcelServiceImpl:75 - File is closed.
+2014-12-21 20:09:56 INFO  ExcelServiceImpl:41 - Excel headers are created
+2014-12-21 20:09:56 INFO  ExcelServiceImpl:61 - New file in this path : D:\output.csv
+2014-12-21 20:09:56 INFO  ExcelServiceImpl:68 - Excel is ready.
+2014-12-21 20:09:56 INFO  ExcelServiceImpl:75 - File is closed.
+2014-12-21 20:10:27 ERROR JsonReadServiceImpl:56 - We caught an exception, here is the reason : java.io.FileNotFoundException: http://api.goeuro.com/apie/v2/position/suggest/en/Hamburg
+2014-12-21 20:12:34 ERROR JsonReadServiceImpl:56 - We caught an exception, here is the reason : java.io.FileNotFoundException: http://api.goeuro.com/apie/v2/position/suggest/en/Hamburg
+2014-12-21 20:12:48 INFO  ExcelServiceImpl:41 - Excel headers are created
+2014-12-21 20:12:48 INFO  ExcelServiceImpl:61 - New file in this path : D:\output.csv
+2014-12-21 20:12:48 INFO  ExcelServiceImpl:68 - Excel is ready.
+2014-12-21 20:12:48 INFO  ExcelServiceImpl:75 - File is closed.
+2014-12-21 20:13:07 ERROR JsonReadServiceImpl:56 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 20:14:13 ERROR JsonReadServiceImpl:56 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 20:19:32 ERROR JsonReadServiceImpl:56 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 20:21:12 ERROR JsonReadServiceImpl:65 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 21:03:48 ERROR JsonReadServiceImpl:64 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 21:16:21 ERROR JsonReadServiceImpl:64 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 21:18:03 ERROR JsonReadServiceImpl:65 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 21:18:43 ERROR JsonReadServiceImpl:65 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 21:19:54 ERROR JsonReadServiceImpl:65 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 21:24:40 ERROR JsonReadServiceImpl:65 - We caught an exception, here is the reason : java.net.SocketTimeoutException: Read timed out
+2014-12-21 21:32:31 INFO  ExcelServiceImpl:41 - Excel headers are created
+2014-12-21 21:32:31 INFO  ExcelServiceImpl:61 - New file in this path : D:\output.csv
+2014-12-21 21:32:31 INFO  ExcelServiceImpl:68 - Excel is ready.
+2014-12-21 21:32:31 INFO  ExcelServiceImpl:75 - File is closed.
+2014-12-21 21:33:20 INFO  ExcelServiceImpl:41 - Excel headers are created
+2014-12-21 21:33:20 INFO  ExcelServiceImpl:61 - New excel file in this path : D:\output.csv
+2014-12-21 21:33:20 INFO  ExcelServiceImpl:68 - Excel is ready.
+2014-12-21 21:33:20 INFO  ExcelServiceImpl:75 - File is closed.
+2014-12-21 21:43:27 INFO  JsonConvertorToCsvApp:40 - Url : http://api.goeuro.com/api/v2/position/suggest/en/
+2014-12-21 21:43:28 ERROR JsonReadServiceImpl:56 - We caught an exception, here is the reason : java.io.IOException: Server returned HTTP response code: 400 for URL: http://api.goeuro.com/api/v2/position/suggest/en/
+2014-12-21 22:02:31 WARN  JsonConvertorToCsvApp:35 - We expect to see a valid string param to append at the end of the link for Url. Please try again.
+2014-12-21 22:13:33 WARN  JsonConvertorToCsvApp:35 - We expect to see a valid string param to append at the end of the link for Url. Please try again.
