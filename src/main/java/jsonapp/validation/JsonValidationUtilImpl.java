@@ -1,6 +1,6 @@
-package jsonapp.exception;
+package jsonapp.validation;
 
-import jsonapp.services.JsonExceptionUtilService;
+import jsonapp.services.JsonValidationUtilService;
 
 /**
  * 20 Dec 2014
@@ -8,7 +8,7 @@ import jsonapp.services.JsonExceptionUtilService;
  * @author gpala
  * 
  */
-public class JsonExceptionUtilImpl implements JsonExceptionUtilService {
+public class JsonValidationUtilImpl implements JsonValidationUtilService {
 	
 	public boolean mayBeJSON(String string) {
 

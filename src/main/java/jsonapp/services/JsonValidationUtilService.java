@@ -6,7 +6,7 @@ package jsonapp.services;
  * @author gpala
  * 
  */
-public interface JsonExceptionUtilService {
+public interface JsonValidationUtilService {
 
 	/**
 	 * @param string

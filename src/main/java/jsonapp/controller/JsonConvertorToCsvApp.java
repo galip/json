@@ -9,8 +9,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import jsonapp.Impl.ExcelServiceImpl;
 import jsonapp.Impl.JsonReadServiceImpl;
-import jsonapp.exception.JsonExceptionUtilImpl;
 import jsonapp.model.Csv;
+import jsonapp.validation.JsonValidationUtilImpl;
 
 /**
  * 19 Dec 2014
@@ -41,12 +41,12 @@ public class JsonConvertorToCsvApp {
 
 		JsonReadServiceImpl jsonReadServiceImpl = new JsonReadServiceImpl();
 		ExcelServiceImpl excelServiceImpl = new ExcelServiceImpl();
-		JsonExceptionUtilImpl jsonExceptionImpl = new JsonExceptionUtilImpl();
+		JsonValidationUtilImpl jsonValidationUtilImpl = new JsonValidationUtilImpl();
 
 		String json = jsonReadServiceImpl.getJsonContentFromURL(Url);
 		logger.info("Json : " + json);
 		
-		boolean validJson = jsonExceptionImpl.mayBeJSON(json);
+		boolean validJson = jsonValidationUtilImpl.mayBeJSON(json);
 
 		if(!validJson) {
 			logger.info("Json is not valid, please try with a valid one.");
