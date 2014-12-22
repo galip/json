@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
+
+import jsonapp.services.JsonReadService;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -13,7 +16,7 @@ import org.apache.log4j.Logger;
  * @author gpala
  * 
  */
-public class JsonReadServiceImpl {
+public class JsonReadServiceImpl implements JsonReadService {
 
 	private static Logger logger = Logger.getLogger(JsonReadServiceImpl.class);
 	

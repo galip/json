@@ -10,6 +10,9 @@ import com.google.gson.reflect.TypeToken;
 import jsonapp.Impl.ExcelServiceImpl;
 import jsonapp.Impl.JsonReadServiceImpl;
 import jsonapp.model.Csv;
+import jsonapp.services.ExcelService;
+import jsonapp.services.JsonReadService;
+import jsonapp.services.JsonValidationUtilService;
 import jsonapp.validation.JsonValidationUtilImpl;
 
 /**
@@ -39,14 +42,14 @@ public class JsonConvertorToCsvApp {
 		String Url = URLStringBuffer.toString();
 		logger.info("Url : " + Url);
 
-		JsonReadServiceImpl jsonReadServiceImpl = new JsonReadServiceImpl();
-		ExcelServiceImpl excelServiceImpl = new ExcelServiceImpl();
-		JsonValidationUtilImpl jsonValidationUtilImpl = new JsonValidationUtilImpl();
+		JsonReadService jsonReadService = new JsonReadServiceImpl();
+		ExcelService excelService = new ExcelServiceImpl();
+		JsonValidationUtilService jsonValidationUtilService = new JsonValidationUtilImpl();
 
-		String json = jsonReadServiceImpl.getJsonContentFromURL(Url);
+		String json = jsonReadService.getJsonContentFromURL(Url);
 		logger.info("Json : " + json);
 		
-		boolean validJson = jsonValidationUtilImpl.mayBeJSON(json);
+		boolean validJson = jsonValidationUtilService.mayBeJSON(json);
 
 		if(!validJson) {
 			logger.info("Json is not valid, please try with a valid one.");
@@ -70,7 +73,7 @@ public class JsonConvertorToCsvApp {
 			return;
 		}
 
-		excelServiceImpl.writeCsvToExcelFromJsonContent(csvList);
+		excelService.writeCsvToExcelFromJsonContent(csvList);
 
 	}
 }
