@@ -7,3 +7,7 @@ java -jar GoEuroTest.jar "Hamburg"
 Url : http://api.goeuro.com/api/v2/position/suggest/en/Hamburg
 
 The "output" csv excel file will be formed in this path : "D:\\output.csv"
+
+log4j is implemented as nice to have. 
+
+To see exceptions, both logger.error and printstacktrace() are printed.
